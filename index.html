@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .calculator {
+    width: 320px;
+    border: 2px solid #333333; /* Dark border color */
+    border-radius: 10px;
+    background-color: #1f1f1f; /* Dark background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .calculator-screen {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #333333; /* Dark gray background color */
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ffffff; /* White text color */
+    box-sizing: border-box;
+  }
+
+  .calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .calculator-keys button {
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #424242; /* Dark button color */
+    color: #ffffff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .calculator-keys button.operator {
+    background-color: #ff6f00; /* Orange operator button color */
+  }
+
+  .calculator-keys button:hover {
+    background-color: #555555; /* Dark button hover color */
+  }
+
+  input {
+    outline: none;
+  }
+</style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="calculator-screen" value=""  />
+    <div class="calculator-keys">
+      <button value="7">7</button>
+      <button value="8">8</button>
+      <button value="9">9</button>
+      <button class="operator" value="/">/</button>
+      <button value="4">4</button>
+      <button value="5">5</button>
+      <button value="6">6</button>
+      <button class="operator" value="*">X</button>
+      <button value="1">1</button>
+      <button value="2">2</button>
+      <button value="3">3</button>
+      <button class="operator" value="-">-</button>
+      <button value="0">0</button>
+      <button value=".">.</button>
+      <button id="calculate" value="=" disabled>=</button>
+      <button class="operator" value="+">+</button>
+      <button value="C">C</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
